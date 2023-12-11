@@ -1,0 +1,271 @@
+html{
+  scroll-behavior: smooth;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+margin: 0px;
+}
+
+.header {
+  padding: 2px 10px;
+  background: #555;
+  color: #f1f1f1;
+  z-index: 1;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+.header-image-left{
+  height: 50px;
+  width: 45px
+}
+
+.header-image-right{
+  height: 30px;
+  width: 26px;
+  padding-top: 6px;
+}
+
+.header-right{
+  float: right;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.header-right a{
+  padding-left: 20px;
+  padding-right: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  color: antiquewhite;
+  font-weight: lighter;
+}
+
+.website-text {
+      margin-left: 300px;
+      margin-right: 300px;
+      text-align: justify;
+      font-size: 20px;
+      animation: 4s anim-lineUp ease-out;
+      line-height: 40px;
+  }
+
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+
+  .website-text h2{
+      color: SlateBlue;
+      text-shadow: rgb(204, 188, 188) 1px 0 5px;
+  }
+
+  .website-photo{
+    float: none;
+    width: 200px;
+    height: 260px;
+    margin-right: 20px;
+    animation: 8s anim-popoutin ease;
+  }
+
+  @keyframes anim-popoutin {
+    0% {
+      color: black;
+      transform: scale(0);
+      opacity: 6;
+      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    25% {
+      color: rgb(0, 0, 0);
+      transform: scale(0);
+      opacity: 1;
+      text-shadow: 1px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+      color: black;
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      /* animate nothing to add pause at the end of animation */
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+
+  * {box-sizing:border-box}
+
+  /* Slideshow container */
+  .slideshow-container {
+    max-width: 700px;
+    position: relative;
+    margin: auto;
+    margin-top: 40px;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    margin-left: -41px;
+    margin-right: -42px;
+    padding: 16px;
+    color: rgb(2, 2, 2);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: default;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    margin-bottom: 10px;
+  }
+  
+  .active{
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  .website-table{
+    padding-top: 20px;
+    margin-top: 50px;
+    margin-left: 350px;
+    margin-right: 350px;
+    background-color: #555;
+    border-radius: 2em;
+    margin-bottom: 60px;
+    }
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.section{
+  scroll-margin-top: 70px;
+}
+
+footer{
+  background: #555;
+  color: antiquewhite;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+}
+.footer-right{
+  padding: 5px 5px;
+}
+
+.footer-left{
+  padding: 10px 20px;
+  font-size: 26px;
+}
+.images-footer{
+  height: 50px;
+  width: 55px;
+  padding-left: 4px;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 0%; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  background: 0%;
+  --fade: 80px;
+}
